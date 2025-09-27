@@ -1,0 +1,19 @@
+@import "tailwindcss";
+
+
+
+
+
+@font-face {
+    font-family: 'sai';
+    src: url('/fonts/Saira-Italic-VariableFont_wdth,wght.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'sai2';
+    src: url('/fonts/Saira-VariableFont_wdth,wght.ttf') format('truetype');
+}
+
+*{
+    font-family: 'sai2';
+}
