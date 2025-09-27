@@ -2,12 +2,12 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { AppContext } from "../../context/AppContext.jsx";
 import {ClosedCaption, Mic} from "lucide-react";
-
+import {Play,CirclePlus} from "lucide-react";
+import Animecard from "../../common/Animecard.jsx";
 const Updates = () => {
     const { animes } = useContext(AppContext);
     const [filter, setFilter] = useState('all');
     const [filteredList, setFilteredList] = useState(animes);
-
     const handleFilter = (type) => {
         setFilter(type);
     }
@@ -37,19 +37,11 @@ const Updates = () => {
 
             {/* Display filtered anime */}
             <div className='mt-4 grid grid-cols-2 md:grid-cols-5 gap-1'>
-                {filteredList.map(anime => (
-                    <div key={anime.id} className=' p-2 flex flex-col   items-start rounded'>
-                        <img src={anime.coverImage.large} loader={<img src={anime.coverImage.large} alt={anime.title.romaji} className='w-full h-60 object-cover rounded' />} alt={anime.title.romaji} className='w-full h-60 object-cover rounded' />
-                            <div className="flex gap-2 mt-1 bg-black/50 p-2 rounded">
-                                <ClosedCaption />
-                                <Mic />
-                            </div>
-                        <div>
-                            <h2 className='mt-2 text-lg hover:text-indigo-300 cursor-pointer leading-none transition-all'>{anime.title.romaji}</h2>
-                            <p className='text-sm text-gray-400'>{anime.type==='both'? 'SUB/DUB':anime.type.toUpperCase()}</p>
-                        </div>
+                {filteredList?(filteredList.map((anime, index) => (
+                    <div key={index}>
+                        <Animecard filteredList={filteredList} anime={anime} index={anime.id} />
                     </div>
-                ))}
+                ))):<p>No anime found</p>}
             </div>
         </div>
     );

@@ -1,5 +1,6 @@
 import React, {useContext, useEffect, useState} from 'react'
 import {AppContext} from "../context/AppContext.jsx";
+import {Link} from "react-router-dom";
 
 const TopAnime = () => {
     const {animes}=useContext(AppContext)
@@ -59,7 +60,7 @@ const TopAnime = () => {
 
 
                     return (
-                        <div key={anime.id} className='p-2 flex flex-row gap-5 bg-black/50 items-start rounded'>
+                        <Link to={`/anime/${anime.id}`} key={anime.id} className='p-2 flex flex-row gap-5 bg-black/50 items-start rounded'>
             <span className={`font-extrabold text-4xl ${rankClass} relative`}>
                 <span className="absolute top-0 left-0 w-full h-full text-transparent stroke-current">{index + 1}</span>
                 {index + 1}
@@ -71,7 +72,7 @@ const TopAnime = () => {
                                 </h2>
                                 <p className='text-sm text-gray-400'>{anime.type === 'both' ? 'SUB/DUB' : anime.type.toUpperCase()}</p>
                             </div>
-                        </div>
+                        </Link>
                     )
                 })}
 

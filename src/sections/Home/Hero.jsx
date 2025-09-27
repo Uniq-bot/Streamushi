@@ -6,7 +6,7 @@ const Hero = () => {
     const { animes } = useContext(AppContext);
     const [current, setCurrent] = useState(0);
 
-    const heroAnime = animes.filter((anime) => anime.trending);
+    const heroAnime = animes.filter((anime) => anime.favorites>4000);
 
     // Auto-slide
     useEffect(() => {
@@ -24,29 +24,30 @@ const Hero = () => {
                 style={{ transform: `translateX(-${current * 100}%)` }}
             >
                 {heroAnime.map((anime) => (
-                    <div key={anime.id} className="min-w-full flex flex-row-reverse justify-between items-end relative">
+                    <div
+                        key={anime.id}
+                        className="min-w-full lg:h-[80vh] h-[40vh] flex bg-center bg-no-repeat bg-cover
+                         justify-between items-end relative"
+                        style={{ backgroundImage: `url(${anime.bannerImage})` }}
+                    >
                         {/* Banner Image */}
-                        <img
-                            src={anime.bannerImage}
-                            alt={anime.title.romaji}
-                            className="w-full lg:w-auto h-[250px] round sm:h-[350px] lg:h-[450px] object-cover"
-                        />
+
 
                         {/* Overlay */}
-                        <div className="absolute lg:hidden inset-0 bg-gradient-to-t from-black/100 to-black/50 z-10" />
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/100 to-black/50 z-10" />
 
                         {/* Text & Icons */}
-                        <div className="absolute lg:static inset-0 z-20 flex flex-col justify-end pb-4   lg:justify-center px-4 sm:px-8 md:px-12 lg:px-16 text-white">
-                            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold">
+                        <div className="absolute lg:static inset-0 z-20 flex flex-col justify-end md:pb-10 pb-5   lg:justify-center px-4 sm:px-8 md:px-12 lg:px-16 text-white">
+                            <h1 className="text-2xl sm:text-3xl md:text-4xl text-gray-400 lg:text-5xl font-semibold">
                                 {anime.title.romaji}
                             </h1>
-                            <div className="flex gap-3 mt-2 text-lg">
+                            <div className="flex text-gray-400 gap-3 mt-2 text-lg">
                                 <ClosedCaption />
                                 <Mic />
                             </div>
-                            <p className="mt-2">{anime.description}</p>
+                            <p className="mt-2 text-gray-400">{anime.description}</p>
                             {anime.trailer && (
-                                <button className="mt-4 bg-indigo-500/90 text-white px-4 py-2 rounded">
+                                <button className="mt-4 hover:bg-indigo-900 transition-all duration-75 cursor-pointer bg-indigo-500/90 text-gray-300 px-4 py-2 rounded">
                                     Watch Trailer
                                 </button>
                             )}
