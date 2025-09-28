@@ -1,12 +1,13 @@
 import React, { useState, useContext, useEffect } from "react";
 import { AppContext } from "../../context/AppContext";
 import { ClosedCaption, Mic } from "lucide-react";
+import {Link} from "react-router-dom";
 
 const Hero = () => {
     const { animes } = useContext(AppContext);
     const [current, setCurrent] = useState(0);
 
-    const heroAnime = animes.filter((anime) => anime.favorites>4000);
+    const heroAnime = animes.filter((anime) => anime.trending);
 
     // Auto-slide
     useEffect(() => {
@@ -47,9 +48,9 @@ const Hero = () => {
                             </div>
                             <p className="mt-2 text-gray-400">{anime.description}</p>
                             {anime.trailer && (
-                                <button className="mt-4 hover:bg-indigo-900 transition-all duration-75 cursor-pointer bg-indigo-500/90 text-gray-300 px-4 py-2 rounded">
-                                    Watch Trailer
-                                </button>
+                                <Link to={`/anime/${anime.id}`} className="mt-4 text-center hover:bg-indigo-900 transition-all duration-75 cursor-pointer bg-indigo-500/90 text-gray-300 px-4 py-2 rounded">
+                                    Watch Demo
+                                </Link>
                             )}
                         </div>
                     </div>

@@ -24,7 +24,7 @@ export const dummyAnime = [
         trending: true,
         type: "sub",
         updatedAt: "2025-09-27T10:00:00Z",
-        trailer: { id: "h6zTg", site: "youtube", thumbnail: "https://i.imgur.com/jkFGt.jpg" }
+        trailer: { id: "zB0uUQBCuA4", site: "youtube", thumbnail: "https://i.imgur.com/jkFGt.jpg" }
     },
     {
         id: 2,
@@ -36,7 +36,7 @@ export const dummyAnime = [
         trending: true,
         type: "dub",
         updatedAt: "2025-09-26T14:00:00Z",
-        trailer: { id: "2W1i7", site: "youtube", thumbnail: "https://i.imgur.com/q1gWr.jpg" }
+        trailer: { id: "uSgZOfM-9zk", site: "youtube", thumbnail: "https://i.imgur.com/q1gWr.jpg" }
     },
     {
         id: 3,
@@ -48,7 +48,7 @@ export const dummyAnime = [
         trending: false,
         type: "sub",
         updatedAt: "2025-09-20T09:30:00Z",
-        trailer: { id: "MGRm4IzK1SQ", site: "youtube", thumbnail: "https://i.imgur.com/43sTt.jpg" }
+        trailer: { id: "AHT772bRkMY", site: "youtube", thumbnail: "https://i.imgur.com/43sTt.jpg" }
     },
     {
         id: 4,
@@ -60,7 +60,7 @@ export const dummyAnime = [
         trending: true,
         type: "dub",
         updatedAt: "2025-09-23T18:45:00Z",
-        trailer: { id: "NlJZ-YgAt-c", site: "youtube", thumbnail: "https://i.imgur.com/8Lghc.jpg" }
+        trailer: { id: "C65oaIHsdYM", site: "youtube", thumbnail: "https://i.imgur.com/8Lghc.jpg" }
     },
     {
         id: 5,
@@ -72,7 +72,7 @@ export const dummyAnime = [
         trending: false,
         type: "both",
         updatedAt: "2025-09-01T12:00:00Z",
-        trailer: { id: "o3V-GvvzjE4", site: "youtube", thumbnail: "https://i.imgur.com/AJ3hQ.jpg" }
+        trailer: { id: "elyXcwunIYA", site: "youtube", thumbnail: "https://i.imgur.com/AJ3hQ.jpg" }
     },
     {
         id: 6,
@@ -83,8 +83,8 @@ export const dummyAnime = [
         format: "TV",
         trending: true,
         type: "sub",
-        updatedAt: "2025-09-27T08:15:00Z",
-        trailer: { id: "VQGCKyvzIM4", site: "youtube", thumbnail: "https://i.imgur.com/mn8Ht.jpg" }
+        updatedAt: "2025-09-28T08:15:00Z",
+        trailer: { id: "GCJnG6DYEeg", site: "youtube", thumbnail: "https://i.imgur.com/mn8Ht.jpg" }
     },
     {
         id: 7,
@@ -96,7 +96,7 @@ export const dummyAnime = [
         trending: false,
         type: "dub",
         updatedAt: "2025-09-15T16:30:00Z",
-        trailer: { id: "fFFnGSYVmbc", site: "youtube", thumbnail: "https://i.imgur.com/r2gsh.jpg" }
+        trailer: { id: "c1Kc-Kh4pHw", site: "youtube", thumbnail: "https://i.imgur.com/r2gsh.jpg" }
     },
     {
         id: 8,
@@ -108,7 +108,7 @@ export const dummyAnime = [
         trending: true,
         type: "both",
         updatedAt: "2025-09-25T11:00:00Z",
-        trailer: { id: "EPVkcwyLQQ8", site: "youtube", thumbnail: "https://i.imgur.com/X2Ljk.jpg" }
+        trailer: { id: "bM1TDkbN7yo", site: "youtube", thumbnail: "https://i.imgur.com/X2Ljk.jpg" }
     },
     {
         id: 9,
@@ -120,7 +120,7 @@ export const dummyAnime = [
         trending: false,
         type: "sub",
         updatedAt: "2025-09-19T09:00:00Z",
-        trailer: { id: "vGuQeQsoRgU", site: "youtube", thumbnail: "https://i.imgur.com/PsoqF.jpg" }
+        trailer: { id: "U5SDSRXHUFo", site: "youtube", thumbnail: "https://i.imgur.com/PsoqF.jpg" }
     },
     {
         id: 10,
@@ -132,7 +132,7 @@ export const dummyAnime = [
         trending: true,
         type: "dub",
         updatedAt: "2025-09-27T06:45:00Z",
-        trailer: { id: "sxufB6DxXk0", site: "youtube", thumbnail: "https://i.imgur.com/4PshX.jpg" }
+        trailer: { id: "yS8n1yY_jFA", site: "youtube", thumbnail: "https://i.imgur.com/4PshX.jpg" }
     }
 ];
 

@@ -8,7 +8,7 @@
 
         return (
 
-                <Link to={`/anime/${anime.id}`} onMouseEnter={()=>setHoverId(anime.id)} onMouseLeave={()=>setHoverId(null)} key={anime.id} className=' p-2 flex gap-1 relative hover:cursor-pointer flex-col   items-start rounded'>
+                <Link to={`/anime/${anime.id}`} onClick={()=>scrollTo(0,0,)} onMouseEnter={()=>setHoverId(anime.id)} onMouseLeave={()=>setHoverId(null)} key={anime.id} className=' p-2 flex gap-1 relative hover:cursor-pointer flex-col   items-start rounded'>
                     <div  className={'w-full h-60 relative'}>
                         <div className={`absolute hidden md:flex ${hoverId===anime.id?'opacity-100':'opacity-0'}  w-full h-full top-0 left-0 flex transition-all duration-100 ease-in-out justify-center items-center  bg-black/50 z-10`}>
                             <Play size={50} />
@@ -31,7 +31,7 @@
                                 <p className={'text-sm text-gray-400'}>{anime.description.slice(0, 100)}</p>
                                 <div className={'flex gap-2 mt-2'}>
                                     <button className={'bg-indigo-500/90 text-white px-4 py-2 rounded'}>Watch Now</button>
-                                    <button className={'bg-indigo-500/90 text-white px-4 py-2 rounded'}><CirclePlus size={20} /></button>
+
                                 </div>
                             </div>
                         ):<p>Loading....</p>}

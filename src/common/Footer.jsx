@@ -12,7 +12,7 @@ const Footer = () => {
 
 
     return (
-        <div className={'w-full flex flex-col justify-center gap-5 px-15 min-h-100 text-gray-300 bg-[#111]'}>
+        <div className={'w-full flex flex-col justify-center py-3 gap-5 px-15 min-h-100 text-gray-300 bg-[#111]'}>
             <div className={'flex items-baseline gap-2'}>
                 <h1 className={'text-3xl font-bold text-indigo-400'}>
                     A-Z List
@@ -22,17 +22,17 @@ const Footer = () => {
                 </p>
             </div>
             <div className={'flex flex-wrap justify-center lg:justify-start items-baseline gap-2'}>
-                <button className={'bg-indigo-500/90 hover:bg-indigo-400 cursor-pointer text-white px-4 py-2 rounded'} onClick={()=>navigate(`/anime-list/all`)}>All</button>
+                <button onClickCapture={()=>scrollTo(0,0,)} className={'bg-indigo-500/90 hover:bg-indigo-400 cursor-pointer text-white px-4 py-2 rounded'} onClick={()=>navigate(`/anime-list/all`)}>All</button>
                 {alphabet.map((letter, index) => (
-                    <button className={'bg-indigo-500/90 hover:bg-indigo-400 cursor-pointer text-white px-4 py-2 rounded'} onClick={()=>navigate(`/anime-list/a-z?/${letter.toLowerCase()}/res`)} key={index}>{letter}</button>
+                    <button onClickCapture={()=>scrollTo(0,0,)} className={'bg-indigo-500/90 hover:bg-indigo-400 cursor-pointer text-white px-4 py-2 rounded'} onClick={()=>navigate(`/anime-list/${letter.toLowerCase()}`)} key={index}>{letter}</button>
                 ))}
             </div>
-           <div className={'flex items-center  gap-5'}>
-               <Link to={'/'} className={'flex items-center lg:gap-2'}>
+           <div className={'flex items-center flex-col lg:flex-row  gap-5'}>
+               <Link to={'/'} className={'flex items-center flex-col lg:gap-2'}>
                    <img src={assets.sushi} alt={'logo'} className={'lg:w-25 lg:h-20 w-10'} />
                    <h1 className={'text-sm font-semibold text-[#DDDDDD] md:text-3xl'}>Streamushi</h1>
                </Link>
-               <div className={'flex justify-between rounded-full items-center gap-2 px-3 py-2 bg-white/10 w-60'}>
+               <div className={'flex justify-between rounded-full items-center gap-2 py-3 px-4 lg:px-3 lg:py-2 bg-white/10 w-60'}>
                    <h1>Join us now: </h1>
                    <Facebook />
                    <Twitter />
